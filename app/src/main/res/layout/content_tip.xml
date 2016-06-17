@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:hint="@string/main.hint.bill"
+        android:ems="10"
+        android:id="@+id/inputBill"
+
+        android:layout_marginTop="23dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/main.button.submit"
+        android:id="@+id/btnSubmit"
+        android:layout_alignBottom="@+id/inputBill"
+        android:layout_toRightOf="@+id/inputBill"
+        android:layout_marginLeft="21dp"
+        android:layout_marginStart="21dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnClear"
+        android:text="@string/main.button.clear"
+        android:layout_below="@+id/btnDecrease"
+        android:layout_alignLeft="@+id/inputPercentage"
+        android:layout_alignStart="@+id/inputPercentage" />
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        android:background="@android:color/darker_gray"
+        android:id="@+id/separator"
+        android:layout_below="@id/btnClear"
+        android:layout_alignStart="@id/btnClear"
+        android:layout_alignEnd="@id/btnSubmit"
+        android:layout_alignLeft="@id/btnClear"
+        android:layout_alignRight="@id/btnSubmit"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/activity_horizontal_margin"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/txtTip"
+        android:visibility="gone"
+        android:layout_below="@+id/separator"
+        android:layout_alignLeft="@+id/btnClear"
+        android:layout_alignStart="@+id/btnClear" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnIncrease"
+        android:text="@string/main.button.increase"
+        android:layout_below="@+id/btnSubmit"
+        android:layout_alignRight="@+id/btnSubmit"
+        android:layout_alignEnd="@+id/btnSubmit" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnDecrease"
+        android:text="@string/main.button.decrease"
+        android:layout_below="@+id/btnSubmit"
+        android:layout_toLeftOf="@+id/btnIncrease"
+        android:layout_toStartOf="@+id/btnIncrease" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberSigned"
+        android:hint="@string/main.hint.percentage"
+        android:ems="10"
+        android:id="@+id/inputPercentage"
+        android:layout_alignBaseline="@+id/btnDecrease"
+        android:layout_alignBottom="@+id/btnDecrease"
+        android:layout_alignLeft="@+id/inputBill"
+        android:layout_alignStart="@+id/inputBill" />
+
+</RelativeLayout>
